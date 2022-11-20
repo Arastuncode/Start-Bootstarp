@@ -1,4 +1,11 @@
-body{height:120vh}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+* { box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+    transition: .5s;
+}
+ul {list-style: none;}
+a {text-decoration: none}
 header{
     background: url(../img/texnoloji.jpeg) center;
     background-size:cover;
@@ -8,14 +15,13 @@ header{
 .container{
     max-width: 1300px;
     margin: auto;
-    padding: 10px;
-}
+    padding: 10px;}
 .nav{padding: 25px 0;position: relative;}
 .nav-brand img{width:15%;display: inline;}
-.nav-link{font: .95em Montserrat, sans-serif;color: #fff;padding: 0 10px;transition: .5s;}
+.nav-link{font: .95em 'Montserrat', sans-serif;color: #fff;padding: 0 10px;transition: .5s;}
+.nav-link:hover{color: #ffc800;}
 #menu li{display: inline-block}
 #menu {width: 80%;display: inline-block;text-align: end;}
-.nav-link:hover{color: #ffc800;}
 .sticky{
     position: fixed;
     z-index: 2;
@@ -32,27 +38,25 @@ header{
     top:40%;
 }
 h1{
-    font-size: 4.5rem;
+    font-size: 4.5em;
     font-weight: 700;
-    line-height: 4.5rem;
     margin-bottom: 4rem;
     color: #fff;
 }
-h2{font:700 2.5em Montserrat, sans-serif;}
-h3{font: italic 2.25em "Roboto Slab", sans-serif; color: #fff;}
-i{font-size:2em;color: #fff;}
+h2{font:700 2.5em 'Montserrat', sans-serif;}
+h3{font: italic 2.25em 'Roboto Slab', serif; color: #fff;}
 h4{text-align: center;font-size: 1.8em;}
+h5{font:700 1.4em 'Montserrat', sans-serif; }
+i{font-size:2em;color: #fff;}
 p{text-align: center;}
-.padding{padding: 15px 0 45px 0}
 .txtgrey{color: #6c757d;font-style: italic;font-size: 1.2em;}
 .btn{
     padding: 25px;
     background:#ffc800;
     color:#fff;
 }
-#services{padding: 15px 0 ;}
 .text{text-align: center;}
-.col-4{width:33%;margin: 10px 0;float:left;padding:10px}
+.col-4{width:33%;margin: 10px 0;padding:10px;display:inline-block}
 .icon{
     background:#ffc800;
     border-radius:50%;
@@ -63,6 +67,7 @@ p{text-align: center;}
     justify-content:center;
     margin: auto;
 }
+section{padding:40px 0}
 .col-4 img{width:100%; }
 .vis{position: relative;}
 .img:hover::after{
@@ -85,21 +90,21 @@ p{text-align: center;}
     cursor: pointer;
     transition: all .5s;
 }
-#about{padding:80px 0;}
 .timeline {
     position: relative;
     width: 100%;
-    padding: 15px 0;
+    padding: 40px 0;
     z-index: 0;
+    margin: 40px 0;
 }
 .timeline::after {
     content: '';
     position: absolute;
     width: 2px;
     background: #e9ecef;
-    height: 1000px;
+    height: 1200px;
     margin-left: -1px;
-    top: 0;
+    top: 5%;
     bottom: 0;
     left: 50%;
 }
@@ -108,7 +113,7 @@ p{text-align: center;}
     position: relative;
     background: inherit;
     width: 50%;
-    height:30vh;
+    height:40vh;
 }
 .timeline-box.left {left: 0;}
 .timeline-box.right {left: 50%;}
@@ -154,6 +159,11 @@ p{text-align: center;}
     align-items:end;
     justify-content: end;
 }
+.right .timeline-content .text{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
 .timeline-box .timeline-content p {
     font-size: 16px;
     padding:10px;
@@ -161,3 +171,74 @@ p{text-align: center;}
     color: #6c757d ;
     text-align: justify;
 }
+.person{text-align: center;}
+.person-img{width:50%;margin: auto;}
+.person-img img{width:100%;border-radius:50%;border: 7px solid #e9ecef;}
+.person p{padding: 10px 0;}
+#team i{
+    background:#212529;
+    border-radius: 50%;
+    font-size:1em;
+    width:40px;
+    height: 40px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+}
+.team-text{width:70%;margin:auto;padding:30px 0}
+.col-3{width:23%;display: inline-flex; justify-content:center;align-items:center}
+.company-logos img {width:50vw;margin: auto;padding:20px;}   
+.w5 img{width:15vw}
+#contact {
+    background:#212529;
+    height:100vh;
+    width:100%;
+}
+.contact{
+    background:url(../img/map-image.png);
+    height:100vh;
+    padding:40px 0;
+    color: #fff;
+    margin: 40px 0;
+}
+.col-6{width:48%;float:left;padding:20px;}
+.inputs input{
+    display: block;
+    width: 100%;
+    height:70px;
+    margin:5px 0;
+    border-radius:5px;
+    color: #000;
+    outline: none;
+    padding: 10px;
+}
+input::placeholder, textarea::placeholder {
+    font-weight: bold;
+    opacity: .5;
+    color: #6c757d;
+}
+textarea {border-radius: 5px;padding:10px;outline: none;}
+.inputs .btn{
+    text-transform: uppercase;
+    opacity: 0.65;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    transform:translate(-45%,50%)
+}
+.inputs{padding:50px 0;}
+footer{padding:20px 0}
+footer ul{
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content:space-between;
+    width:100%;}
+footer i{
+    background: #212529;
+    border-radius:50%;
+    font-size: 1em;
+    padding:15px;
+}
+footer a{color: #212529;margin: 0 15px;}
